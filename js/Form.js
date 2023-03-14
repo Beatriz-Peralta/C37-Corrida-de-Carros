@@ -3,7 +3,7 @@ class Form {
     this.input = createInput("").attribute("placeholder", "Digite seu nome");
     this.playButton = createButton("Play");
     this.titleImg = createImg("./assets/title.png", "título do jogo");
-    this.greeting = cretaeElement("h2");
+    this.greeting = createElement("h2");
   }
 
   setElementPosition() {
@@ -17,7 +17,7 @@ class Form {
 
   hide() {
    // USE A FUNÇÃO PARA DESAPARECER OS ELEMENTOS
-    this.greetinghide();
+    this.greeting.hide();
     this.playButton.hide();
     this.input.hide();
   }
@@ -27,12 +27,12 @@ class Form {
    this.playButton.mousePressed(() => {
      this.input.hide();
      this.playButton.hide();
-     var message = Olá ${this.input.value()} </br>espere outro jogador entrar...
+     var message = Olá ${this.input.value()} </br>espere outro jogador entrar...;
      this.greeting.html(message);
      player.name = this.input.value();
-     player.index = 1;      }); }
+     player.index = 1;      });            }
      /* O símbolo usado para escrever a mensagem abaixo (laranja) é a crase. */
-  }
+  
 
   display() {
     // CHAME A FUNÇÃO DE POSIÇÃO DOS ELEMENTOS
